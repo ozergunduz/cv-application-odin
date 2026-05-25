@@ -1,0 +1,307 @@
+body {
+    background: linear-gradient(to bottom right, #eef6fb, #dbeafe);
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Intro section */
+.intro{
+    text-align: center;
+    padding: 20px 100px;
+    margin: 20px 30px 0 30px;
+
+    background-color: rgba(255, 255, 255, 0.55);
+
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    border-radius: 15px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Main app wrapper */
+.app{
+    display: flex;
+    width: 100%;
+    flex: 1;
+
+    border: 1px solid rgba(148, 163, 184, 0.25);
+
+    background-color: rgba(255,255,255,0.15);
+}
+
+/* Left tool panel */
+.tool-side{
+    text-align: center;
+
+    background-color: rgba(191, 219, 254, 0.45);
+
+    border: 1px solid rgba(148, 163, 184, 0.35);
+
+    flex: 1;
+
+    margin: 10px 10px 10px 30px;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* CV display stays clean white */
+.cv-display{
+    text-align: center;
+
+    background-color: white;
+
+    border: 1px solid rgba(148, 163, 184, 0.3);
+
+    flex: 4;
+
+    margin: 10px 30px 10px 10px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cv-display p {
+    white-space: pre-wrap;
+}
+
+/* CV layout */
+.cv-left-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.cv-left-column {
+    flex: 1;
+}
+
+.cv-right-column {
+    flex: 2;
+}
+
+/* Profile photo */
+.cv-photo {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid rgba(191, 219, 254, 0.8);
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Save button */
+.saveButton {
+    margin-top: 20px;
+
+    padding: 10px 20px;
+
+    font-size: 16px;
+
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.25);
+}
+
+.saveButton:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+/* Print mode */
+@media print {
+
+    body * {
+        visibility: hidden;
+    }
+
+    .cv-display,
+    .cv-display * {
+        visibility: visible;
+    }
+
+    .cv-display {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        width: 100%;
+
+        box-shadow: none;
+
+        border: none;
+    }
+}
+
+
+.tool-side button {
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    font-size: 15px;
+
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.25);
+
+    max-width: 100%;
+
+    white-space: normal;
+
+    word-wrap: break-word;
+
+    text-align: center;
+
+    width: 90%;
+}
+
+
+.tool-side button:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+
+    box-shadow: 0 6px 14px rgba(59, 130, 246, 0.35);
+}
+
+.tool-side button:active {
+    transform: scale(0.98);
+}
+
+.tool-side input,
+.tool-side textarea,
+.tool-side select {
+    width: 90%;
+
+    padding: 10px;
+
+    margin-top: 8px;
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(148, 163, 184, 0.4);
+
+    background-color: rgba(255,255,255,0.7);
+
+    backdrop-filter: blur(4px);
+
+    font-size: 14px;
+}
+
+.tool-side .deleteButton {
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    font-size: 15px;
+
+    background: linear-gradient(135deg, #f87171, #dc2626);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
+}
+
+.tool-side .deleteButton:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+
+    box-shadow: 0 6px 14px rgba(220, 38, 38, 0.35);
+}
+
+.tool-side .deleteButton:active {
+    transform: scale(0.98);
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 15px;
+}
+
+button {
+    font-size: 15px;
+}
+
+input,
+textarea {
+    font-size: 15px;
+}
+
+.cv-left-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.cv-left-column {
+    flex: 1;
+
+    border-right: 2px solid rgba(148, 163, 184, 0.35);
+
+    padding-right: 20px;
+}
+
+.cv-right-column {
+    flex: 2;
+
+    padding-left: 20px;
+}
